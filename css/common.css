@@ -1,0 +1,119 @@
+@charset "UTF-8";
+
+/* 초기화 */
+* { box-sizing: border-box; }
+body, h1, h2, p, ul, li , a, dl, dt, dd { margin: 0; padding: 0; }
+li { list-style: none; }
+a { text-decoration: none; }
+.hidden { position: absolute; left: -9999px; }
+
+/* 웹폰트 */
+body { font-family: 'Noto Sans KR', sans-serif; }
+#gnb { font-family: 'Noto Serif'; }
+h2 { font-family: 'Noto Serif'; }
+
+/* 헤더 */
+#header { height: 100vh; background: url(../images/mainBg.jpg) no-repeat center center / cover; 
+          display: flex; justify-content: center; align-items: center; }
+#header h1 span { font-size: 5vw; }
+#header h1 { font-family: 'Noto Serif'; font-size: 6vw; color: #fff; text-align: center;
+             animation: flicker 1.5s infinite alternate; } 
+   @keyframes flicker { 0%, 18%, 22%, 25%, 53%, 57%, 100% 
+     { text-shadow:
+         0 0 4px #fff,
+         0 0 11px #fff,
+         0 0 19px #fff,
+         0 0 40px #0fa,
+         0 0 80px #0fa,
+         0 0 90px #0fa,
+         0 0 100px #0fa,
+         0 0 150px #0fa; }
+          20%, 24%, 55% { text-shadow: none; } }
+
+/* gnb */
+#gnb { position: absolute; top: 0; left: 0; width: 100%; }
+#gnbList { height: 80px; display: flex; justify-content: end; line-height: 80px; }
+#gnbList li a { color: #fff; font-weight: bold; text-transform: uppercase; 
+                margin: 0 40px 0 40px; font-size: 1vw; }
+            
+/* about */
+#aboutAll { height: 100vh; color: #fff; background: #000; position: relative; }
+#about h2 { font-size: 4vw; padding: 70px 0 0 90px; color: #fff; 
+                    /* text-shadow: 0 0 7px #fff, 0 0 10px #fff, 0 0 21px #fff;  */
+                    }
+#about img { width: 22.47vw; height: 30.77vw; }
+#about div { float: left; padding-left: 13.02vw; padding-top: 80px; }
+#profileSkill dt { font-family: 'Noto Serif'; font-weight: bold; font-size: 1.25vw; 
+                    margin-bottom: 25px; }
+#profileSkill dd { margin-bottom: 20px; font-size: 1vw; }
+#profile span { font-family: 'Noto Serif'; font-weight: bold; }
+#skill { font-family: 'Noto Serif'; font-weight: bold; }
+#skill dt { padding-top: 0.52vw; }
+#skill dd { position: relative; }
+#skill .barWrap { display: block; float: right; position: absolute; top: 0.26vw; left: 7.21vw;
+                  width: 15.63vw; height: 1.04vw; border: 1px solid #fff; }
+#skill .bar { display: block; background: #fff; height: 0.99vw; animation:stack 2s 1; }
+  @keyframes stack { 0% { width : 0; color: #fff; }
+                     100% { }}    
+#skill .bar1 { width: 10.94vw; }
+#skill .bar2 { width: 12.50vw; }
+#skill .bar3 { width: 14.06vw; }
+#skill .bar4 { width: 14.06vw; }
+#skill .bar5 { width: 9.38vw; }
+#skill .bar6 { width: 12.50vw; }
+#skill .percent { position: absolute; top: -0.26vw; left: 15.89vw; }
+
+
+/* portfolio */
+#portfolio { height: 100vh; }
+#portfolio h2 { font-size: 4vw; padding: 60px 0 0 90px; }
+#portfolioAll { display: flex; }
+#portfolioInfo { padding: 70px 90px 0 90px; }
+#portfolioInfo .dongaKR { font-size: 2.5vw; font-weight: bold; line-height: 35px; }
+#portfolioInfo .dongaENG { font-size: 1.5vw; padding-top: 5px; }
+#portfolioInfo .my { font-size: 0.9vw; padding-top: 10px; }
+#portfolioInfo span { font-family: 'Noto Serif'; font-weight: bold; font-size: 1.56vw; }
+#portfolioInfo ul { padding-top: 90px; }
+#info li { padding-bottom: 30px; font-size: 0.94vw; }
+#info .color { background: url(../images/portfolioColor.jpg) no-repeat 5.73vw 0.52vw; } 
+
+#portfolioHP { text-align: center; }
+#portfolioHP img { width: 54.01vw; height: 28.13vw; }
+#portfolioHP p { font-size: 0.94vw; }
+#portfolioHP .view { display: block; border: 2px solid #000; width: 7.34vw; height:2.5vw; margin: 70px auto;
+                     font-family: 'Noto Serif'; font-weight: bold; font-size: 1.56vw; 
+                     text-transform: uppercase; color: #000; }
+
+#portfolio2 { height: 100vh;  }
+#portfolio2All { display: flex; }
+#portfolio2Info { padding: 200px 90px 0 90px; }
+#portfolio2Info .jejuTitle { font-size: 2.5vw; font-weight: bold; line-height: 35px; }
+#portfolio2Info .my { font-size: 0.9vw; padding-top: 20px; } 
+#portfolio2Info span { font-family: 'Noto Serif'; font-weight: bold; font-size: 1.56vw; }
+#portfolio2Info ul { padding-top: 90px; }
+#info2 li { padding-bottom: 30px; font-size: 0.94vw; }
+#info2 .color { background: url(../images/portfolio2Color.jpg) no-repeat 5.73vw 0.52vw; } 
+
+#portfolio2HP { text-align: center; padding: 4.81vw 0 0 10.25vw;}
+#portfolio2HP img { width: 41.93vw; height: 30.68vw; }
+#portfolio2HP .view { display: block; border: 2px solid #000; width: 7.34vw; height:2.5vw; margin: 70px auto;
+                      font-family: 'Noto Serif'; font-weight: bold; font-size: 1.56vw; 
+                      text-transform: uppercase; color: #000; }
+
+
+/* contact */
+#contact { height: 60vh; text-align: center; color: #fff; background: #000; }
+#contact h2 { font-size: 4vw; padding-bottom: 100px; color: #fff; 
+              /* text-shadow: 0 0 7px #fff, 0 0 10px #fff, 0 0 21px #fff;  */
+          }
+#contactList { font-size: 1.3vw; }
+#contactList li { padding-bottom: 30px; }
+#contactList img { width: 2.66vw; height: 2.66vw;  }
+#contact .copyright { padding-top: 60px; font-size: 0.94vw; }
+
+/* 맨위로 가는 버튼 */
+.top { position: fixed; bottom: 15px; right: 25px; font-size: 2vw; color: #fff; 
+       text-shadow: 0 0 7px #0fa, 0 0 10px #0fa, 0 0 21px #0fa; }
+
+
+
